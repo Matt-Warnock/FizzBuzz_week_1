@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FizzBuzzTest {
 
     @ParameterizedTest
-    @CsvSource({"1, 1", "2, 2", "4, 4", "3, Fizz"})
+    @CsvSource({"1, 1", "2, 2", "4, 4", "3, Fizz", "6, Fizz"})
 
     void convert_number(int input, String output) {
         assertEquals(output, FizzBuzz.convert(input));
