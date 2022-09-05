@@ -1,24 +1,15 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTest {
-    @Test
-    void converts_to_string_one() {
-        assertEquals("1", FizzBuzz.convert(1));
-    }
 
-    @Test
-    void converts_to_string_two() {
-        assertEquals("2", FizzBuzz.convert(2));
-    }
-    @Test
-    void converts_to_string_four() {
-        assertEquals("4", FizzBuzz.convert(4));
-    }
+    @ParameterizedTest
+    @CsvSource({"1, 1", "2, 2", "4, 4", "3, Fizz"})
 
-    @Test
-    void returns_fuzz() {
-        assertEquals("Fizz", FizzBuzz.convert(3));
+    void convert_number(int input, String output) {
+        assertEquals(output, FizzBuzz.convert(input));
     }
 }
