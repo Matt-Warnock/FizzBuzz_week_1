@@ -8,4 +8,8 @@ class FizzBuzzTest {
         assertEquals("1", FizzBuzz.convert(1));
     }
 
+    @Test
+    void converts_to_string_two() {
+        assertEquals("2", FizzBuzz.convert(2));
+    }
 }
