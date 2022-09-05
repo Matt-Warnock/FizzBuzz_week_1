@@ -12,4 +12,8 @@ class FizzBuzzTest {
     void converts_to_string_two() {
         assertEquals("2", FizzBuzz.convert(2));
     }
+    @Test
+    void converts_to_string_four() {
+        assertEquals("4", FizzBuzz.convert(4));
+    }
 }
